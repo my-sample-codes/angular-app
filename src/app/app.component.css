@@ -1,0 +1,14 @@
+.center-aligned {
+    text-align: center;
+}
+
+.banner {
+    color: brown;
+}
+
+.uniform-length-btn {
+    width: 15em;
+    margin: 1em;
+    padding: 1em;
+    font-size: 26px;
+}
