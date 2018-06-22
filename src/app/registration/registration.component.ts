@@ -21,7 +21,10 @@ import {
 import {
     RegisterService
 } from './register.service';
-
+import {
+    Observable,
+    of
+} from 'rxjs';
 
 
 @Component({
@@ -48,6 +51,7 @@ export class RegistrationComponent implements OnInit {
         this._registerService.registerUser(this.userModel).subscribe(data => {
             console.log('Kuch to mila hai : ' + data);
             this.userModel = data;
+            this._registerService.sharedUserObservable = of(data);
             this.router.navigate(['/dashboard']);
         }, error => {
             alert('Error MILA hai bhaai : ' + error);
